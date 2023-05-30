@@ -34,7 +34,7 @@ vector<int> twoSum(vector<int> &nums, int target) {
 
 Vector is a kind of container in C++. The containers share a common interface. This common interface makes the library easier to learn; what we learn about one kind of container applies to another！But each kind of container offers a different set of performance and functionality trade-offs.
 
-The `&number` is a referenced loop variable, the `for(const auto &number : nums)` will let `&number` directly references to the element in `num` vector, on contrary, if we used without `&`, as in `(const auto number : nums)`, the loop variable `number` will be a **copy** of the element, so changing on the `number` will not effect the element in inside the `num` vector container.
+The `&number` is a referenced loop variable, the `for(const auto &number : nums)` will let `&number` directly references to the element in `num` vector. In contrast, if we used without `&`, as in `(const auto number : nums)`, the loop variable `number` will be a **copy** of the element, so changing on the `number` will not effect the element in inside the `num` vector container.
 
 ## Python solution
 
