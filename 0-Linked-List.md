@@ -67,3 +67,27 @@ while (x != null):
   x = x.next
 ```
 
+## Reverse a Linked List
+
+##### Pseudocode
+
+1. Initialize three pointers: currentNode, pastNode, and nextNode.
+1. To reverse the linked list, we need to let every currentNode point to pastNode, and nextNode point to currentNode.
+1. Start by setting currentNode as the head of the linked list.
+1. Traverse through the linked list using a loop until currentNode becomes null.
+1. In each iteration, move the pastNode pointer to the currentNode, move the currentNode pointer to the nextNode, which was stored in the nextNode pointer. (**We have to store the currentNode.next to nextNode first, because once we have redirected currentNode.next to the pastNode, the pointer to nextNode will disappear.**)
+1. After the loop ends, the pastNode pointer will be pointing to the last node of the original linked list, which will be the new head of the reversed linked list.
+1. Return the pastNode pointer as the new head of the reversed linked list.
+
+```python
+currentNode = firstNode # or called "headNode"
+pastNode = None
+while (currentNode != null):
+  nextNode = currentNode.next
+  currentNode.next = pastNode
+  pastNode = currentNode
+  currentNode = nextNode
+
+firstNode = pastNode # set up the new headNode
+```
+
