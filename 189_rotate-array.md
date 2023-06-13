@@ -28,8 +28,8 @@ def rotate(self, nums, k):
 
 Python solution is slow, but here just show how condense the Python code can be, meanwhile, only using list concatenation and some list built-in.
 
-Without using` nums[:]`. The code without semicolon will create a <u>new list</u> called `nums`
+Without using` nums[:]`. The code without semicolon will only create a <u>new list</u> called `nums`
 
 `nums[:] = nums[-k:] + nums[:-k] #modifying the list in-place`
 
-`nums[] = nums[-k:] + nums[:-k] #created a new list. Not modifying the list in-place`
+`nums = nums[-k:] + nums[:-k] #created a new list. Not modifying the list in-place`
